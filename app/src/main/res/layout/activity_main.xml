@@ -16,38 +16,6 @@
             android:gravity="center">
 
             <!-- SYSTEM KEYBOARDS -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/labelMargin"
-                android:textColor="@color/colorAccent"
-                android:textSize="@dimen/labelTextSize"
-                android:textStyle="bold"
-                android:text="@string/systemKeyboardLabel"/>
-
-            <EditText
-                android:layout_width="@dimen/fieldWidth"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/fieldMarginBottom"
-                android:maxLength="20"
-                android:inputType="number"
-                android:hint="@string/systemNumber" />
-
-            <EditText
-                android:layout_width="@dimen/fieldWidth"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/fieldMarginBottom"
-                android:maxLength="20"
-                android:inputType="numberDecimal"
-                android:hint="@string/systemNumberDecimal" />
-
-            <EditText
-                android:layout_width="@dimen/fieldWidth"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/fieldMarginBottom"
-                android:maxLength="50"
-                android:inputType="text"
-                android:hint="@string/systemQwerty" />
 
 
             <!-- CUSTOM KEYBOARDS -->
@@ -61,40 +29,14 @@
                 android:text="@string/customKeyboardLabel"/>
 
             <EditText
-                android:id="@+id/testNumberField"
-                android:layout_width="@dimen/fieldWidth"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/fieldMarginBottom"
-                android:maxLength="20"
-                android:hint="@string/customNumber" />
-
-            <EditText
-                android:id="@+id/testNumberDecimalField"
-                android:layout_width="@dimen/fieldWidth"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/fieldMarginBottom"
-                android:maxLength="20"
-                android:hint="@string/customNumberDecimal" />
-
-            <EditText
                 android:id="@+id/testQwertyField"
-                android:layout_width="@dimen/fieldWidth"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/fieldMarginBottom"
-                android:maxLength="50"
-                android:hint="@string/customQwerty" />
+                android:hint="@string/customQwerty"
+                android:maxLength="50" />
 
             <!-- SWITCH ACTIVITIES BUTTON -->
-            <Button
-                android:id="@+id/switchActivitiesButton"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="120dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:background="@color/colorAccent"
-                android:textColor="@android:color/white"
-                android:text="@string/toAdvancedButtonText"/>
         </LinearLayout>
     </ScrollView>
 
