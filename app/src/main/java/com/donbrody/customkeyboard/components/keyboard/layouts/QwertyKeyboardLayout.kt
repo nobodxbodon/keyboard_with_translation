@@ -157,8 +157,8 @@ class QwertyKeyboardLayout(context: Context, controller: KeyboardController?) :
         rowFour.add(createSpacer(columnWidth))
 
         val rowFive = ArrayList<View>()
-        rowFive.add(createButton(
-                "Symbols", (columnWidth * 2.0f), KeyboardController.SpecialKey.SYMBOL))
+        //rowFive.add(createButton(
+        //        "Symbols", (columnWidth * 2.0f), KeyboardController.SpecialKey.SYMBOL))
         rowFive.add(createButton("", columnWidth * 7.0f, ' '))
         rowFive.add(createButton("⇦", columnWidth, KeyboardController.SpecialKey.BACK))
         rowFive.add(createButton("⇨", columnWidth, KeyboardController.SpecialKey.FORWARD))
@@ -376,7 +376,7 @@ class QwertyKeyboardLayout(context: Context, controller: KeyboardController?) :
         row.add(createButton("8", columnWidth, '8'))
         row.add(createButton("9", columnWidth, '9'))
         row.add(createButton("0", columnWidth, '0'))
-        row.add(createButton("Del", columnWidth, KeyboardController.SpecialKey.DELETE))
+        // row.add(createButton("Del", columnWidth, KeyboardController.SpecialKey.DELETE))
         return createRow(row)
     }
 
