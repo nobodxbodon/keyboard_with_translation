@@ -38,19 +38,21 @@ open class DefaultKeyboardController(inputConnection: InputConnection):
     }
 
     override fun handleKeyStroke(c: Char) {
-        buffer += c
-        englishChineseTranslator.translate(buffer)
-                .addOnSuccessListener { translatedText ->
-                    // Translation successful.
-                    clearAll()
-                    for (i in translatedText.indices) {
-                        addCharacter(translatedText.get(i))
+        addCharacter(c)
+        if (c == '?' || c == '.') {
+            englishChineseTranslator.translate(inputText())
+                    .addOnSuccessListener { translatedText ->
+                        // Translation successful.
+                        clearAll()
+                        for (i in translatedText.indices) {
+                            addCharacter(translatedText.get(i))
+                        }
                     }
-                }
-                .addOnFailureListener { exception ->
-                    // Error.
-                    // ...
-                }
+                    .addOnFailureListener { exception ->
+                        // Error.
+                        // ...
+                    }
+        }
 
     }
 

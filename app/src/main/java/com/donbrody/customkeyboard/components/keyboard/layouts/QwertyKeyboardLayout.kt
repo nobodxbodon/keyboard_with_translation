@@ -139,8 +139,8 @@ class QwertyKeyboardLayout(context: Context, controller: KeyboardController?) :
             rowThree.add(createButton(
                     "Next", (columnWidth * 1.5f), KeyboardController.SpecialKey.NEXT))
         } else {
-            rowThree.add(createButton(
-                    "Done", (columnWidth * 1.5f), KeyboardController.SpecialKey.DONE))
+            /*rowThree.add(createButton(
+                    "Done", (columnWidth * 1.5f), KeyboardController.SpecialKey.DONE))*/
         }
 
         val rowFour = ArrayList<View>()
@@ -202,8 +202,8 @@ class QwertyKeyboardLayout(context: Context, controller: KeyboardController?) :
             rowThree.add(createButton(
                     "Next", (columnWidth * 1.5f), KeyboardController.SpecialKey.NEXT))
         } else {
-            rowThree.add(createButton(
-                    "Done", (columnWidth * 1.5f), KeyboardController.SpecialKey.DONE))
+            /*rowThree.add(createButton(
+                    "Done", (columnWidth * 1.5f), KeyboardController.SpecialKey.DONE))*/
         }
 
         val rowFour = ArrayList<View>()
@@ -265,8 +265,8 @@ class QwertyKeyboardLayout(context: Context, controller: KeyboardController?) :
             rowThree.add(createButton(
                     "Next", (columnWidth * 1.5f), KeyboardController.SpecialKey.NEXT))
         } else {
-            rowThree.add(createButton(
-                    "Done", (columnWidth * 1.5f), KeyboardController.SpecialKey.DONE))
+            /*rowThree.add(createButton(
+                    "Done", (columnWidth * 1.5f), KeyboardController.SpecialKey.DONE))*/
         }
 
         val rowFour = ArrayList<View>()
@@ -329,8 +329,8 @@ class QwertyKeyboardLayout(context: Context, controller: KeyboardController?) :
             rowThree.add(createButton(
                     "Next", (columnWidth * 1.5f), KeyboardController.SpecialKey.NEXT))
         } else {
-            rowThree.add(createButton(
-                    "Done", (columnWidth * 1.5f), KeyboardController.SpecialKey.DONE))
+            /*rowThree.add(createButton(
+                    "Done", (columnWidth * 1.5f), KeyboardController.SpecialKey.DONE))*/
         }
 
         val rowFour = ArrayList<View>()
