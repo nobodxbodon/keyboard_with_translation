@@ -155,3 +155,5 @@ fabric.properties
 
 .idea
 app/google-services.json
+
+*.diff

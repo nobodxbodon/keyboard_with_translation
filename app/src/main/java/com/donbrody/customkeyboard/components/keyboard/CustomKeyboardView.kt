@@ -17,10 +17,7 @@ import com.donbrody.customkeyboard.components.expandableView.ExpandableStateList
 import com.donbrody.customkeyboard.components.expandableView.ExpandableView
 import com.donbrody.customkeyboard.components.keyboard.controllers.DefaultKeyboardController
 import com.donbrody.customkeyboard.components.keyboard.controllers.KeyboardController
-import com.donbrody.customkeyboard.components.keyboard.controllers.NumberDecimalKeyboardController
 import com.donbrody.customkeyboard.components.keyboard.layouts.KeyboardLayout
-import com.donbrody.customkeyboard.components.keyboard.layouts.NumberDecimalKeyboardLayout
-import com.donbrody.customkeyboard.components.keyboard.layouts.NumberKeyboardLayout
 import com.donbrody.customkeyboard.components.keyboard.layouts.QwertyKeyboardLayout
 import com.donbrody.customkeyboard.components.textFields.CustomTextField
 import com.donbrody.customkeyboard.components.utilities.ComponentUtils
@@ -164,30 +161,11 @@ class CustomKeyboardView(context: Context, attr: AttributeSet) : ExpandableView(
     }
 
     private fun createKeyboardLayout(type: KeyboardType, ic: InputConnection): KeyboardLayout? {
-        when(type) {
-            KeyboardType.NUMBER -> {
-                return NumberKeyboardLayout(context, createKeyboardController(type, ic))
-            }
-            KeyboardType.NUMBER_DECIMAL -> {
-                return NumberDecimalKeyboardLayout(context, createKeyboardController(type, ic))
-            }
-            KeyboardType.QWERTY -> {
-                return QwertyKeyboardLayout(context, createKeyboardController(type, ic))
-            }
-            else -> return@createKeyboardLayout null // this should never happen
-        }
+        return QwertyKeyboardLayout(context, createKeyboardController(type, ic))
     }
 
     private fun createKeyboardController(type: KeyboardType, ic: InputConnection): KeyboardController? {
-        return when(type) {
-            KeyboardType.NUMBER_DECIMAL -> {
-                NumberDecimalKeyboardController(ic)
-            }
-            else -> {
-                // not all keyboards require a custom controller
-                DefaultKeyboardController(ic)
-            }
-        }
+        return DefaultKeyboardController(ic)
     }
 
     override fun configureSelf() {
