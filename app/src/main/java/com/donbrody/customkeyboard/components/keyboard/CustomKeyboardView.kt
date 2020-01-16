@@ -19,7 +19,6 @@ import com.donbrody.customkeyboard.components.keyboard.controllers.DefaultKeyboa
 import com.donbrody.customkeyboard.components.keyboard.controllers.KeyboardController
 import com.donbrody.customkeyboard.components.keyboard.layouts.KeyboardLayout
 import com.donbrody.customkeyboard.components.keyboard.layouts.QwertyKeyboardLayout
-import com.donbrody.customkeyboard.components.textFields.CustomTextField
 import com.donbrody.customkeyboard.components.utilities.ComponentUtils
 import java.util.*
 
@@ -124,20 +123,8 @@ class CustomKeyboardView(context: Context, attr: AttributeSet) : ExpandableView(
                 registerEditTextsRecursive(view.getChildAt(i))
             }
         } else {
-            if (view is CustomTextField) {
-                registerEditText(view.keyboardType, view)
-            } else if (view is EditText) {
-                when (view.inputType) {
-                    InputType.TYPE_CLASS_NUMBER -> {
-                        registerEditText(CustomKeyboardView.KeyboardType.NUMBER, view)
-                    }
-                    InputType.TYPE_NUMBER_FLAG_DECIMAL -> {
-                        registerEditText(CustomKeyboardView.KeyboardType.NUMBER_DECIMAL, view)
-                    }
-                    else -> {
-                        registerEditText(CustomKeyboardView.KeyboardType.QWERTY, view)
-                    }
-                }
+            if (view is EditText) {
+                registerEditText(CustomKeyboardView.KeyboardType.QWERTY, view)
             }
         }
     }
@@ -212,8 +199,6 @@ class CustomKeyboardView(context: Context, attr: AttributeSet) : ExpandableView(
     }
 
     enum class KeyboardType {
-        NUMBER,
-        NUMBER_DECIMAL,
         QWERTY
     }
 }
