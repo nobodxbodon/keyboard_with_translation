@@ -19,10 +19,5 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".AdvancedFeaturesActivity"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"
-            android:configChanges="orientation|screenSize" />
-
     </application>
 </manifest>
